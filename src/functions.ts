@@ -4,7 +4,7 @@
  *      C = (F - 32) * 5/9
  */
 export function fahrenheitToCelius(temperature: number): number {
-    return 0;
+    return ((temperature - 32) * 5) / 9;
 }
 
 /**
@@ -12,7 +12,23 @@ export function fahrenheitToCelius(temperature: number): number {
  * if the number is greater than zero.
  */
 export function add3(first: number, second: number, third: number): number {
-    return 0;
+    if (first > 0 && second > 0 && third > 0) {
+        return first + second + third;
+    } else if (first < 0 && second > 0 && third > 0) {
+        return second + third;
+    } else if (first > 0 && second < 0 && third > 0) {
+        return first + third;
+    } else if (first > 0 && second > 0 && third < 0) {
+        return first + second;
+    } else if (first > 0 && second < 0 && third < 0) {
+        return first;
+    } else if (first < 0 && second > 0 && third < 0) {
+        return second;
+    } else if (first < 0 && second < 0 && third > 0) {
+        return third;
+    } else {
+        return 0;
+    }
 }
 
 /**
@@ -20,7 +36,7 @@ export function add3(first: number, second: number, third: number): number {
  * mark added to the end.
  */
 export function shout(message: string): string {
-    return "";
+    return message.toUpperCase() + "!";
 }
 
 /**
@@ -28,7 +44,13 @@ export function shout(message: string): string {
  * mark. Do not use an `if` statement in solving this question.
  */
 export function isQuestion(message: string): boolean {
-    return true;
+    /*if (message[message.length - 1] === "?") {
+        return true;
+    } else {
+        return false;
+    }
+    */
+    return message[message.length - 1] === "?";
 }
 
 /**
@@ -37,5 +59,11 @@ export function isQuestion(message: string): boolean {
  * upper or lower case), then return `false`. Otherwise, return `null`.
  */
 export function convertYesNo(word: string): boolean | null {
-    return true;
+    if (word === "yes" || word === "YES") {
+        return true;
+    } else if (word === "no" || word === "NO") {
+        return false;
+    } else {
+        return null;
+    }
 }
