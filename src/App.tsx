@@ -8,9 +8,6 @@ function App(): JSX.Element {
             <header className="App-header">
                 <h1>Rachel Sison UD CISC275 with React Hooks and TypeScript</h1>
             </header>
-            <header>
-                <h2> This is a header</h2>
-            </header>
             <p>
                 Edit <code>src/App.tsx</code> and save. This page will
                 automatically reload. Hello World
